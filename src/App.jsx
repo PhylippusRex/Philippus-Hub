@@ -5,7 +5,7 @@ function App() {
     { 
       name: 'GitHub', 
       desc: 'Check my repos and builds.',
-      url: 'https://github.com/PhilippusRex', 
+      url: 'https://github.com/PhylippusRex', 
       iconBg: 'bg-zinc-900',
       icon: (
         <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -39,7 +39,7 @@ function App() {
     { 
       name: 'Discord', 
       desc: 'Connect with me directly on Discord.',
-      url: 'https://discord.gg/philippus', 
+      url: 'https://discord.gg/users/1239587640240767087', 
       iconBg: 'bg-zinc-900',
       icon: (
         <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 127.14 96.36">
