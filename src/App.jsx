@@ -29,9 +29,10 @@ function App() {
       desc: 'Send a direct message for updates.',
       url: 'https://t.me/yourusername', 
       iconBg: 'bg-zinc-900',
+      // RESTORED: Paper Plane Telegram SVG
       icon: (
-        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 0 0 6 3.75v16.5a2.25 2.25 0 0 0 2.25 2.25h7.5A2.25 2.25 0 0 0 18 20.25V3.75a2.25 2.25 0 0 0-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-6 18.75h10.5m-10.5-3h10.5m-10.5-3h10.5m-10.5-3h10.5" />
+        <svg className="w-4 h-4 text-white mr-0.5 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M23.91 2.212a.6.6 0 0 0-.531-.075L.435 9.44a.602.602 0 0 0-.03 1.108l5.58 2.51 2.05 6.425a.6.6 0 0 0 .964.288l3.65-3.03 4.83 3.58a.6.6 0 0 0 .945-.373l5.8-21.8a.6.6 0 0 0-.314-.636zm-8.815 12.39l-1.3 4.23-1.07-3.34 7.62-7.85-5.25 6.96z" />
         </svg>
       )
     },
@@ -60,19 +61,18 @@ function App() {
   ];
 
   return (
-    // Screen height constraint: Changed "min-h-screen" to an exact "h-screen" view with "overflow-hidden" to firmly lock scaling
-    <div className="relative h-screen bg-[#010201] text-[#ffffff] flex flex-col items-center justify-between p-4 font-sans overflow-hidden select-none">
+    <div className="relative h-screen bg-[#010201] text-[#ffffff] flex flex-col items-center justify-between p-4 pb-4 font-sans overflow-hidden select-none">
       
       {/* Background Gradients */}
       <div className="absolute inset-0 bg-[radial-gradient(#ffffff05_1px,transparent_1px)] [background-size:20px_20px] pointer-events-none"></div>
       <div className="absolute top-[-15%] left-1/2 -translate-x-1/2 w-[500px] h-[400px] bg-[#0e850b] opacity-[0.08] blur-[120px] rounded-full pointer-events-none"></div>
 
-      {/* Profile Card (Tightened vertically from p-8 to p-5, lowered avatar scale slightly) */}
-      <div className="w-full max-w-sm bg-gradient-to-b from-zinc-950/50 to-zinc-950/10 border border-zinc-900/60 rounded-[28px] p-5 mt-3 text-center backdrop-blur-md shadow-2xl relative overflow-hidden">
+      {/* Profile Card */}
+      <div className="w-full max-w-sm bg-gradient-to-b from-zinc-950/50 to-zinc-950/10 border border-zinc-900/60 rounded-[24px] p-4 mt-1 text-center backdrop-blur-md shadow-2xl relative overflow-hidden">
         <div className="absolute inset-x-0 top-0 h-[1px] bg-gradient-to-r from-transparent via-[#0e850b]/20 to-transparent"></div>
 
         {/* Profile Image Wrap */}
-        <div className="relative w-24 h-24 mx-auto mb-3">
+        <div className="relative w-20 h-20 mx-auto mb-2">
           <div className="w-full h-full rounded-full p-[2px] bg-gradient-to-b from-[#0e850b] to-zinc-800 shadow-[0_0_20px_rgba(14,133,11,0.2)]">
             <img 
               src="/avatar.png" 
@@ -82,47 +82,46 @@ function App() {
           </div>
         </div>
         
-        {/* Restored Custom Headings */}
-        <h1 className="text-2xl font-extrabold tracking-wide uppercase mb-1 bg-gradient-to-b from-white to-zinc-300 bg-clip-text text-transparent">
+        {/* RESTORED: Custom Name with explicit Oswald Font Style */}
+        <h1 
+          style={{ fontFamily: "'Oswald', sans-serif" }}
+          className="text-3xl font-bold tracking-[0.05em] mb-1 bg-gradient-to-b from-white to-zinc-300 bg-clip-text text-transparent"
+        >
           PHiLiPPUS
         </h1>
         
-        {/* Profile Pill Badge Layout */}
-        <div className="inline-block border border-[#0e850b]/30 bg-[#0e850b]/5 px-4 py-1 rounded-full">
-          <p className="text-[10px] font-bold tracking-[0.2em] text-[#0e850b] uppercase">
+        <div className="inline-block border border-[#0e850b]/30 bg-[#0e850b]/5 px-3 py-0.5 rounded-full">
+          <p className="text-[9px] font-bold tracking-[0.2em] text-[#0e850b] uppercase">
             TRADER | WRITER | BUILDER
           </p>
         </div>
       </div>
 
-      {/* Links List Section (Tightened gap from 3.5 to 2) */}
-      <div className="w-full max-w-sm flex flex-col gap-2.5 my-auto px-1">
+      {/* Links List Section */}
+      <div className="w-full max-w-sm flex flex-col gap-2 my-auto px-1 z-10">
         {links.map((link, index) => (
           <a
             key={index}
             href={link.url}
             target="_blank"
             rel="noopener noreferrer"
-            // Slimmed down inner padding from p-4 to py-2.5 px-4 to save massive vertical real estate
-            className="group w-full py-2.5 px-4 flex items-center justify-between border border-zinc-900/80 rounded-xl bg-zinc-950/40 backdrop-blur-sm hover:border-[#0e850b]/50 hover:bg-zinc-900/40 transition-all duration-300 ease-out shadow-md"
+            className="group w-full py-2 px-4 flex items-center justify-between border border-zinc-900/80 rounded-xl bg-zinc-950/40 backdrop-blur-sm hover:border-[#0e850b]/50 hover:bg-zinc-900/40 transition-all duration-300 ease-out shadow-md"
           >
             <div className="flex items-center gap-3.5">
-              {/* Scaled icon container to match compact size */}
-              <div className={`w-9 h-9 rounded-lg flex items-center justify-center border border-zinc-800/60 shadow-inner group-hover:scale-105 transition-transform duration-300 ${link.iconBg}`}>
+              <div className={`w-8 h-8 rounded-lg flex items-center justify-center border border-zinc-800/60 shadow-inner group-hover:scale-105 transition-transform duration-300 ${link.iconBg}`}>
                 {link.icon}
               </div>
               
               <div className="flex flex-col text-left">
-                <span className="font-bold text-[14px] tracking-wide text-zinc-200 group-hover:text-white transition-colors duration-200">
+                <span className="font-bold text-[13px] tracking-wide text-zinc-200 group-hover:text-white transition-colors duration-200">
                   {link.name}
                 </span>
-                <span className="text-[11px] text-zinc-500 line-clamp-1 group-hover:text-zinc-400 transition-colors duration-200">
+                <span className="text-[10px] text-zinc-500 line-clamp-1 group-hover:text-zinc-400 transition-colors duration-200">
                   {link.desc}
                 </span>
               </div>
             </div>
 
-            {/* Clean Right Arrow SVG */}
             <div className="text-zinc-600 group-hover:text-[#0e850b] transition-all duration-300 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 p-1">
               <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth="2.5" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 19.5l15-15m0 0H8.25m11.25 0v11.25" />
@@ -132,8 +131,8 @@ function App() {
         ))}
       </div>
 
-      {/* Subdued Footer Brought Closer */}
-      <div className="w-full text-center text-[10px] text-zinc-600 tracking-wider pb-2 pt-1">
+      {/* COMPACTED FOOTER: Lowered layout margins and extra space removed */}
+      <div className="w-full text-center text-[10px] text-zinc-600 tracking-wider pt-1">
         &copy; 2026 Philippus
       </div>
 
@@ -142,4 +141,3 @@ function App() {
 }
 
 export default App;
-      
