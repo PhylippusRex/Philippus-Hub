@@ -5,7 +5,7 @@ function App() {
     { 
       name: 'GitHub', 
       desc: 'Check my repos and builds.',
-      url: 'https://github.com', 
+      url: 'https://github.com/PhilippusRex', 
       iconBg: 'bg-zinc-900',
       icon: (
         <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -16,7 +16,7 @@ function App() {
     { 
       name: 'Twitter', 
       desc: 'Follow me on X.',
-      url: 'https://twitter.com', 
+      url: 'https://x.com/0x_Philippus', 
       iconBg: 'bg-zinc-900',
       icon: (
         <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 16 16">
@@ -27,19 +27,19 @@ function App() {
     { 
       name: 'Telegram', 
       desc: 'Send a direct message for updates.',
-      url: 'https://t.me/yourusername', 
+      url: 'https://t.me/Ox_Philippus', 
       iconBg: 'bg-zinc-900',
-      // RESTORED: Paper Plane Telegram SVG
       icon: (
-        <svg className="w-4 h-4 text-white mr-0.5 mt-0.5" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M23.91 2.212a.6.6 0 0 0-.531-.075L.435 9.44a.602.602 0 0 0-.03 1.108l5.58 2.51 2.05 6.425a.6.6 0 0 0 .964.288l3.65-3.03 4.83 3.58a.6.6 0 0 0 .945-.373l5.8-21.8a.6.6 0 0 0-.314-.636zm-8.815 12.39l-1.3 4.23-1.07-3.34 7.62-7.85-5.25 6.96z" />
+        <svg className="w-5 h-5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <line x1="22" y1="2" x2="11" y2="13"></line>
+          <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
         </svg>
       )
     },
     { 
       name: 'Discord', 
       desc: 'Connect with me directly on Discord.',
-      url: 'https://discord.com', 
+      url: 'https://discord.gg/philippus', 
       iconBg: 'bg-zinc-900',
       icon: (
         <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 127.14 96.36">
@@ -50,7 +50,7 @@ function App() {
     { 
       name: 'Email', 
       desc: 'Drop me a message for collaboration...',
-      url: 'mailto:your@email.com', 
+      url: 'mailto: philipikpenyic@gmail.com', 
       iconBg: 'bg-zinc-900',
       icon: (
         <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -82,7 +82,7 @@ function App() {
           </div>
         </div>
         
-        {/* RESTORED: Custom Name with explicit Oswald Font Style */}
+        {/* Custom Name with explicit Oswald Font Style */}
         <h1 
           style={{ fontFamily: "'Oswald', sans-serif" }}
           className="text-3xl font-bold tracking-[0.05em] mb-1 bg-gradient-to-b from-white to-zinc-300 bg-clip-text text-transparent"
@@ -131,7 +131,7 @@ function App() {
         ))}
       </div>
 
-      {/* COMPACTED FOOTER: Lowered layout margins and extra space removed */}
+      {/* Compact Footer */}
       <div className="w-full text-center text-[10px] text-zinc-600 tracking-wider pt-1">
         &copy; 2026 Philippus
       </div>
@@ -141,3 +141,4 @@ function App() {
 }
 
 export default App;
+              
